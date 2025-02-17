@@ -1,0 +1,25 @@
+vector từ (word embedding): Xử lý ngôn ngữ tự nhiên sentence_transformers
+
+các bước để thực hiện project ai:
+B1: Xác định mục tiêu
+Loại: Hybrid Chatbot
+B2(Chuẩn bị dữ liệu csv):
+    -Tạo csv với 2 cột rõ ràng là cột câu hỏi và cột câu trả lời
+    -Làm sạch văn bản. Hãy chắc chắn rằng văn bản không có lỗi chính tả
+    -Tiền sử lý: Xử lý văn bản để văn bản cô đọng và được chuyển hết về chữ thường(có thể làm bằng python)
+B3: Xây dựng mô hình TensorFlow
+    *Lựa chọn mô hình: sử dụng retrieval-based để hiểu thêm về ai và sử dụng Generative, Hybird khi muốn mở rộng
+    *Huấn luyện mô hình:
+        Sử dụng file csv để huấn luyện mô hình Tensorflow
+        Điều chỉnh các siêu tham số (hyperparameters) để đạt được hiệu suất tốt nhất.
+B4: Tích hợp AI(Sử dụng Gemini api key để tích hợp AI vào ngày trong chương trình python của mình)
+B5: Triển khai chatbot
+
+
+Chú thích:
+    -retrieval-based: Mô hình ai dùng để truy xuất cơ bản chỉ trả lời được các câu hỏi đã có trong csv và không thể trả lời các câu hỏi mở rộng
+    -Generative: Phức tạp hơn, có thể trả lời các câu hỏi mở rộng, thường được sử dụng trong ai trò truyện, tạo và tìm kiếm nội dung(Gemini là một ví dụ)
+    -Hybird: Là mô hình kết hợp giữa 2 thứ trên sử dụng: Nhận câu hỏi của người dùng tìm câu trả lời trong csv nếu ngoài phạm vi của csv sẽ tạo nội dung bằng gemini
+    -Hyperparameters: Là cài đặt đặt cho mô hình trước khi huấn luyện.  Kiểm soát cách mô hình học. (Ví dụ: Tốc độ học, số lớp, độ sâu cây.) .
+                    Điều chỉnh chúng để có hiệu suất tốt nhất (độ chính xác, khả năng khái quát hóa).
+    
